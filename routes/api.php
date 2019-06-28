@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/path', function () {
-    return config("horizon.path");
-});
+Route::get(
+    'path',
+    GeneaLabs\NovaHorizon\Http\Controllers\HorizonController::class . '@index'
+);
